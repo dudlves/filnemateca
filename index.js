@@ -27,5 +27,27 @@ servidor.get('/filmes/:posicao', (req,res) =>{
     res.send(filmes[posicao])
 })
 
+servidor.get('/busca/:trecho', (req,res)=>{
+    res.send(req.params.trecho)
+})
+
+
+
+servidor.get('/busca/:trecho', (req, res)=>{
+   const filmes = require('./database/filmes.json')
+    function retornaTitulos(i){
+        if(i.filmes == "titulo")
+        return i;
+    }
+    let titulos = filmes.filter(retornaTitulos)
+    retornaTitulos
+    
+
+
+//    filmes.filter(trecho)
+   res.send(req.params.trecho)
+   
+})
+
 
 servidor.listen(3000)
