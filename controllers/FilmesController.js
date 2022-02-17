@@ -7,10 +7,11 @@ const FilmesController = {
         const filme = require('../database/filmes.json')
         res.send(filme)
     },
-    pelaPosicao:(req,res) =>{
+    buscaPorPosicao:(req,res) =>{
         let posicao = req.params.posicao;
         const filmes = require('../database/filmes.json')
-        res.send(filmes[posicao])
+        let filme =filmes[posicao]
+        res.render('filme.ejs',{filme})
     },
     buscarPorTrecho: (req, res)=>{
         let trecho = req.params.trecho;
@@ -21,8 +22,8 @@ const FilmesController = {
         let resultadoDaBusca= filmes.filter(filtradora)
           res.send(resultadoDaBusca)
         },
-        buscarPorId: (req, res)=> {},
-        buscarPorGenero: (req, res)=> {},
+    buscarPorId: (req, res)=> {},
+    buscarPorGenero: (req, res)=> {},
 }
 
 module.exports = FilmesController

@@ -9,7 +9,7 @@ router.get('/', FilmesController.index)
 
 router.get('/filme', FilmesController.listarFilmes)
 
-router.get('/filmes/:posicao', FilmesController.pelaPosicao)
+router.get('/filmes/:posicao', FilmesController.buscaPorPosicao)
 
 router.get('/busca/:trecho', FilmesController.buscarPorTrecho)
 
