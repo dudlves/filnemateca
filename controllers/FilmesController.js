@@ -1,7 +1,7 @@
 const FilmesController = {
     index: (req,res) => {
-        console.log("Alguém fez uma requisição...")
-        res.send("Toma ai o que você me pediu...")
+        const filmes = require("../database/filmes.json")
+        res.render('index.ejs',{filmes})
     },
     listarFilmes:(req,res) => {
         const filme = require('../database/filmes.json')
@@ -21,7 +21,7 @@ const FilmesController = {
         }
         let resultadoDaBusca= filmes.filter(filtradora)
           res.send(resultadoDaBusca)
-        },
+    },
     buscarPorId: (req, res)=> {},
     buscarPorGenero: (req, res)=> {},
 }
