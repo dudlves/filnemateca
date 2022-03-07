@@ -11,7 +11,7 @@ router.get('/filme', FilmesController.listarFilmes)
 
 router.get('/filmes/:posicao', FilmesController.buscaPorPosicao)
 
-router.get('/busca/:trecho', FilmesController.buscarPorTrecho)
+router.get('/busca', FilmesController.buscarPorTrecho)
 
 router.get('/buscaid/:id', (req,res) => {
     let id =req.params.id
