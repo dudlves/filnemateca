@@ -22,7 +22,19 @@ const FilmesController = {
         let resultadoDaBusca= filmes.filter(filtradora)
           res.render('index.ejs',{filmes: resultadoDaBusca})
     },
-    buscarPorId: (req, res)=> {},
+    buscaPorId: (req, res)=> {
+        let id = req.params.id
+        const filmes = require('../database/filmes.json')
+        let filtradora = filme =>{
+            if(filme.id == id){
+                return true
+            }else {
+                return false 
+            }
+        }
+        const filme = filmes.find(filtradora)
+        res.render('filme.ejs',{filme})
+    },
     buscarPorGenero: (req, res)=> {},
 }
 
