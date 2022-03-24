@@ -1,4 +1,6 @@
-const express = require ('express')          
+const express = require ('express') 
+
+const middlewareGardaBusca = require("../middlewares/middlewareGuardaBusca")
 
 const router = express.Router()
 
@@ -9,9 +11,9 @@ router.get('/', FilmesController.index)
 
 router.get('/filme', FilmesController.listarFilmes)
 
-router.get('/filmes/:posicao', FilmesController.buscaPorPosicao)
+router.get('/filmes/:id', FilmesController.buscaPorId)
 
-router.get('/busca', FilmesController.buscarPorTrecho)
+router.get('/busca', middlewareGardaBusca ,FilmesController.buscarPorTrecho)
 
 router.get('/buscaid/:id', (req,res) => {
     let id =req.params.id
@@ -19,6 +21,6 @@ router.get('/buscaid/:id', (req,res) => {
     
 })
 
-router.get('/')
+
 
 module.exports = router

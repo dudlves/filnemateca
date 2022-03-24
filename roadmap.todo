@@ -11,3 +11,7 @@ Execute o comando 'npm test' para acompanhar os testes das funções que você
 irá desenvolver.
 Listar Filmes:
     
+✔ Adequar o index.ejs @done(22-03-08 16:17)
+☐ Readequar a rota get
+router.get('/filmes/:posicao', FilmesController.buscaPorPosicao)
+☐ Codar o controller buscaPorId.
