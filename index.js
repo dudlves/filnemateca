@@ -13,6 +13,10 @@ servidor.set('view engine','ejs')
 
 servidor.use(express.static(path.join(__dirname, 'public')));
 
+//poe as informaçao do formulario no req.body
+servidor.use(express.urlencoded({ extended: false }));
+
+
 servidor.use(middlewareGlobal)
 
 //Usando rotiador 
