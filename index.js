@@ -1,4 +1,5 @@
 const express = require('express')
+const session = require("express-session");
 const path =require('path')
 const middlewareGlobal = require('./middlewares/middlewareGlobal')
 //Importantando os roteadore
@@ -12,6 +13,9 @@ const servidor = express()
 servidor.set('view engine','ejs')
 
 servidor.use(express.static(path.join(__dirname, 'public')));
+
+// configurando o middleware que lida com session
+servidor.use(session({secret:"SEGREDO", saveUninitialized: false, resave: true}));
 
 //poe as informaçao do formulario no req.body
 servidor.use(express.urlencoded({ extended: false }));
