@@ -11,11 +11,11 @@ html {
 }
 
 body{
-   background-color:rgb(216, 76, 183);
+   background-color: #5946c5;
    display: flex;
    justify-content: center;
    align-items: center;
-   color: rgb(216, 76, 183);
+   color: #5946c5;
    height: 100%;
 }
 

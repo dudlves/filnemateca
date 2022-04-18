@@ -244,5 +244,18 @@
         "censura": 14,
         "trailer": "https://youtu.be/o2YGWLQELhE",
         "sinopse": "O filme conta sobre a história de três profissionais que lutaram para evitar um problema ainda maior do que o causado na explosão da usina nuclear de Chernobyl, na Ucrânia Soviética em 1986."
+    },
+    {
+        "id": "ewosq8z4l258klzy",
+        "cartaz": "1650317740061-E3xNT-oWUAQR9zO.jpeg",
+        "titulo": "jujutsu kaisen 0",
+        "generos": [
+            "Ação",
+            "Aventura",
+            "Fantasia"
+        ],
+        "censura": "14",
+        "trailer": "https://www.youtube.com/watch?v=aTpSx7ERT7w",
+        "sinopse": "O jovem Yuta Okkotsu ganha o controle de um espírito extremamente poderoso, então um grupo de feiticeiros o matriculam na Tokyo Prefectural Jujutsu High School, para ajudá-lo a controlar esse poder e também para ficar de olho nele."
     }
 ]
